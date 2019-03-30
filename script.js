@@ -55,7 +55,7 @@ function moveBackgroundTo(point) {
 }
 
 
-$(document).scroll(function(){
+$(document).on('scroll ready', function() {
     if (isElementInViewport($hairElement)) {
         moveBackgroundTo('hair');
         $kavafis.css('opacity', '0');
