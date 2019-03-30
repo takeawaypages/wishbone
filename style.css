@@ -26,15 +26,16 @@ body {
     z-index: 1;
     position: fixed;
     background-repeat: no-repeat;
-    background-color: antiquewhite;
+    background-color: #53524e;
     opacity: 0;
     transition: all 4s;
+    background-position: center;
 }
 #text {
     z-index: 1;
     position: absolute;
     color: whitesmoke;
-    padding: 10px;
+    padding: 50px;
     padding-top: 40vh;
     font-size: 70px;
     opacity: 0.5;

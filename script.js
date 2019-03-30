@@ -5,7 +5,8 @@ var activeBackgroundPoint,
         'initial': 'calc(50% - 1100px) calc(50% - 1617px)',
         'eyes': 'calc(50% - 177px) calc(50% + 1001px)',
         'face': 'calc(50%) calc(50% + 500px)',
-        'voice': 'calc(50%) calc(50%)'
+        'voice': 'calc(50% + 1336px) calc(50% + 2087px)',
+        'days': 'calc(50%) calc(50%)'
     },
     backgroundSizes = {
         'lips': 'auto 5000px',
@@ -13,7 +14,8 @@ var activeBackgroundPoint,
         'initial': 'auto 5000px',
         'eyes': 'auto 5000px',
         'face': 'auto 3000px',
-        'voice': 'auto 100%'
+        'voice': 'auto 5000px',
+        'days': 'auto 100%'
     },
     $initialElement = $('.textLine1'),
     $hairElement = $('.textLine2'),
@@ -22,6 +24,7 @@ var activeBackgroundPoint,
     $backgroundElement = $('#background'),
     $faceElement = $('.textLine5'),
     $voiceElement = $('.textLine6'),
+    $daysElement = $('.textLine7'),
     $finElement = $('.textLine8'),
     $kavafis = $('#kavafis');
 
@@ -71,6 +74,9 @@ $(document).scroll(function(){
     } else if (isElementInViewport($voiceElement)) {
         moveBackgroundTo('voice');
         $kavafis.css('opacity', '0');
+    } else if (isElementInViewport($daysElement)) {
+            moveBackgroundTo('days');
+            $kavafis.css('opacity', '0');
     } else if (isElementInViewport($finElement)) {
         activeBackgroundPoint = 'fin';
         $kavafis.css('opacity', '1');
